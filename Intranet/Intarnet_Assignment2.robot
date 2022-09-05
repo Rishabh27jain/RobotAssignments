@@ -37,18 +37,12 @@ Go To Home And Click On Holiday And Find the holiday in a year 2021
 Find the holiday difference for 2021 & 2022 for Ahmedabad. 
    
     FOR    ${elmenent2022}    IN    @{Holiday2022} 
-       FOR      ${element2021}    IN   ${Holiday2021}
-          IF    ${element2021} == ${element2022}
-             ${var} = set variable 1
-             exit for loop if   '${element2022}' == '${element2021}'
-          ELSE
-             ${var} = set variable 0
-           END
-       END
-       IF   ${var} == 0
-           append to list  ${DifferenceList}    ${element_2021}
-       END
+        ${contains}=    Run Keyword And Return Status    Should Contain    ${Holiday2021}    ${element2022}
+        IF      '${contains}' == "False"
+            append to list  ${DifferenceList}    ${element2022}
+        END
     END
+    LOG 	${DifferenceList}
 
 
 

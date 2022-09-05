@@ -6,10 +6,10 @@ ${Url}                   https://intranet.einfochips.com
 ${BrowserName}          Chrome
 ${InputText}		 rish
 ${DateToSearch}	 	02
-@{ActualList}     create list
-@{ActualList1}      create list
-@{ExpectedList}   create list
-${CityName}                     Ahmedabad
-@{Holiday2022}                  create list
-@{Holiday2021}                  create list
-@{DifferenceList}               create list
+@{ActualList}=     	create list
+@{ActualList1}=      	create list
+@{ExpectedList}=   	create list
+${CityName}                     USA
+@{Holiday2022}=                  create list
+@{Holiday2021}=                  create list
+@{DifferenceList}=               create list
