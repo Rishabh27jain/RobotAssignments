@@ -45,11 +45,3 @@ Verify The Differnece Between Given Year And Location
         END
     END
     LOG     ${DifferenceList}
-
-
-
-
-
-
-
-

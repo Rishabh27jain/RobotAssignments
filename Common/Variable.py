@@ -1,5 +1,5 @@
 #This file contains a test data.
-EmailId='*******8'
+EmailId='*******'
 Password=********
 PartialText='rish'
 EnterFirstHolidayYear=2022

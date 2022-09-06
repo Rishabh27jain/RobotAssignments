@@ -14,8 +14,10 @@ Enter Name In Search Field
     FOR    ${i}    IN RANGE    ${elements}
        Exit For Loop If      '${i}' == '${elements}'
        ${n}=   Evaluate   ${i} +1
-       ${name}       Get Text        css:table.table-hover>tbody>tr:nth-child(${n})>td:nth-child(2)
-       Append To List    ${ActualList}      ${name}
+       ${String}=    Convert To String    ${n}
+       ${Element}    Replace String  ${CSS_GetVariableName}   INDEX   ${String}
+       ${Name}       get text        ${Element}
+       Append To List    ${ActualList}      ${Name}
        ${i}=  Evaluate   ${i} + 1
     END
 
@@ -24,6 +26,3 @@ Verify Name Contain Partial Text
          ${contains}=    Run Keyword And Return Status    Should Contain    ${element}    ${PartialText}
          Run Keyword If    ${contains} == "False"    Fail    PartialTextNotMatched
     END
-
-
-

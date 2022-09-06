@@ -30,21 +30,5 @@ Click On Wishing You Section And Retrive Records
     END
 
 Verify Both Anniversary Records Are Same
-   Lists Should Be Equal  ${ActualList}    ${ExpectedList}  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   Lists Should Be Equal  ${ActualList}    ${ExpectedList} 
 
