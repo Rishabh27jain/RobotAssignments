@@ -1,6 +1,9 @@
 *** Settings ***
 Documentation     A resource file with reusable keywords and variables.
 Library           SeleniumLibrary
-Resource          Variable.robot
+Library     	  String
+Library     	  Collections
+Library		      BuiltIn
 Resource          locator_variables.robot 
-Resource          keywords.robot 
+Resource          keywords.robot
+Variables	      Variable.py
