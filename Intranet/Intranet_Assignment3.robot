@@ -1,11 +1,10 @@
 *** Settings ***
 Documentation   To validate the Intranet Functionality
 Test Setup      Open The Browser And Login To Intranet
-Test Teardown   Close Browser
+Test Teardown   Sign Out And Close Browser
 Resource        ../Common/Resources.robot
 
 *** Test Cases ***
-
 Go To Home And Click Anniversary 
     mouse over          ${CSS_Cursor}	
     click element       ${CSS_SelectAnniversary}

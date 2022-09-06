@@ -1,6 +1,5 @@
 *** Keywords ***
-
-Open The Browser And Login To Intranet
+Open Browser And Login To Intranet
     open browser    ${url}    ${browser_name}
     Wait Until Element Is Visible   ${CSS_ElementVisible}      timeout=50
     Input Text          ${CSS_Email}   ${EmailId}
@@ -12,7 +11,7 @@ Open The Browser And Login To Intranet
     click button        ${CSS_SelectNext}	
     click button        ${CSS_SelectNext}
 
-Close Browser Session
+Sign Out And Close Browser
     Click Link		${CSS_LogoutLink}
     Close Browser
 

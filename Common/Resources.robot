@@ -6,4 +6,4 @@ Library     	  Collections
 Library		      BuiltIn
 Resource          locator_variables.robot 
 Resource          keywords.robot
-Variables	      Variable.py
+
