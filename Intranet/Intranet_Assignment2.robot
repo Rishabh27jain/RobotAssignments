@@ -8,8 +8,9 @@ Resource        ../Common/Resources.robot
 Go To Home And Click On Holiday 
     Mouse Over                     ${CSS_Cursor}
     Click Element                  ${CSS_SelectHoliday}
+    Wait Until Element Is Visible  ${CSS_HolidayListVisible}
 
-Search Holiday For Given Year And Location
+Search Holiday For First Year And Location
     @{Holiday2022}=	Create List
     Set Global Variable            ${Holiday2022}
     Mouse Over                 	   ${CSS_Cursor}
@@ -22,12 +23,12 @@ Search Holiday For Given Year And Location
        Append To List    ${Holiday2022}        ${element.text}
     END
 
-Search Holiday For Different Year And Location
+Search Holiday For Second Year And Location
     @{Holiday2021}=	Create List
     Set Global Variable            ${Holiday2021}
     Mouse Over         	   ${CSS_Cursor}
     Click Element                  ${CSS_SelectHoliday}
-    Select From List By Value       ${CSS_SelectHolidayYear}      ${EnterSecondHoliddayYear}
+    Select From List By Value       ${CSS_SelectHolidayYear}      ${EnterSecondHolidayYear}
     Select From List By Value       ${CSS_SelectLocation}         ${EnterLocationSecondYear}
     Click Button                   ${CSS_SubmitButton}
     @{elements2021}     Get WebElements        ${CSS_GetHolidayList}
@@ -35,8 +36,7 @@ Search Holiday For Different Year And Location
        Append To List    ${Holiday2021}       ${element.text}
     END
 
-Verify The Differnece Between Given Year And Location
-    
+Verify The Holiday Difference Between Both Years
     @{DifferenceList}=        Create List
     FOR    ${element2022}    IN    @{Holiday2022}
         ${contains}=    Run Keyword And Return Status    Should Contain    ${Holiday2021}    ${element2022}

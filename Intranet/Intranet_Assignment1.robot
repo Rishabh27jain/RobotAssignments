@@ -16,7 +16,7 @@ Enter Name In Search Field
        ${n}=   Evaluate   ${i} +1
        ${String}=    Convert To String    ${n}
        ${Element}    Replace String  ${CSS_GetVariableName}   INDEX   ${String}
-       ${Name}       get text        ${Element}
+       ${Name}       Get Text        ${Element}
        Append To List    ${ActualList}      ${Name}
        ${i}=  Evaluate   ${i} + 1
     END
