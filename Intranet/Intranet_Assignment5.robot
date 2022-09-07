@@ -74,5 +74,3 @@ Click On Wishing You Section And Retrieve Records
 
 Verify Both Anniversary Records Are Same
    lists should be equal  ${ActualList}    ${ExpectedList}
-
-
