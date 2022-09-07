@@ -14,7 +14,7 @@ Retrive Anniversay Records For Today's Date
     Set Global Variable         ${ActualList}
     Mouse Over          ${CSS_Cursor}	
     Click Element       ${CSS_SelectAnniversary}
-    Select From List By Value        ${CSS_SearchDate}      06
+    Select From List By Value        ${CSS_SearchDate}      ${TodayDate}
     @{elements}     Get WebElements    ${CSS_GetAnniversayName}
     FOR    ${element}    IN     @{elements}
         Append To List    ${ActualList}      ${element.text}
