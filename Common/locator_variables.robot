@@ -29,4 +29,3 @@ ${CSS_HolidayListVisible}	css:h4.top_heading_text
 ${CSS_Last}                     css:section[id='no-more-tables']>table>tbody>tr>td:nth-child(n)
 ${CSS_SelectBirthdayDate}       css:section[id='no-more-tables']>form>div>table>tbody>tr:first-child>td:nth-child(2)>select
 ${CSS_GetDateDropDown}          css:section[id='no-more-tables']>form>div>table>tbody>tr:first-child>td:nth-child(2)>select
-

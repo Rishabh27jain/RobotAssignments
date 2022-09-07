@@ -14,9 +14,3 @@ Open Browser And Login To Intranet
 Sign Out And Close Browser
     Click Link		${CSS_LogoutLink}
     Close Browser
-
-
-
-
-
-
