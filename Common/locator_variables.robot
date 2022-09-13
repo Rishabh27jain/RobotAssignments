@@ -19,6 +19,7 @@ ${CSS_GetAnniversaryName}	    css:table.table-hover>tbody>tr>td:first-child
 ${CSS_ClickAnniversaryLogo}	    css:img[title='View all anniversaries']
 ${CSS_LogoutLink}		css:.user-portion > div:nth-of-type(2) > a:nth-of-type(2)
 ${CSS_HolidayListVisible}	css:h4.top_heading_text
+${CSS_SelectBirth}              https://intranet.einfochips.com/employee_intranet/portal/event/birthday
 ${CSS_SelectBirthDay}           css:li[class='dropdown-item']:nth-child(5)
 #${CSS_SearchBirthDayDate}    css:section[id='no-more-tables']>form>div>table>tbody>tr:first-child>td:nth-child(2)
 ${CSS_GetBirthDayName}          css:table.table-hover>tbody>tr:nth-child(INDEX)>td:first-child

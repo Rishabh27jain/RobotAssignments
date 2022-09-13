@@ -4,5 +4,6 @@ Library           SeleniumLibrary
 Library     	  String
 Library     	  Collections
 Library		      BuiltIn
+Library			DateTime
 Resource          locator_variables.robot 
 Resource          keywords.robot
