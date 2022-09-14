@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation   To validate the Intranet Functionality
-Test Setup      Open Browser And Login To Intranet
-Test Teardown   Sign Out And Close Browser
+Suite Setup      Open Browser And Login To Intranet
+Suite Teardown     Sign Out And Close Browser
 Resource        ../Common/Resources.robot
 
 *** Test Cases ***
@@ -22,6 +22,7 @@ Retrieve Anniversary Records For Today's Date
     END
 
 Click On Wishing You Section And Retrieve Records
+    Go To             ${Home_Page}
     @{ExpectedList}=	    Create List
     Set Global Variable         ${ExpectedList}
     Click Element       ${CSS_ClickAnniversaryLogo}

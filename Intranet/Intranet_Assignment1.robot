@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation   To Validate The Intranet Functionality
-Test Setup      Open Browser And Login To Intranet
-Test Teardown   Sign Out And Close Browser
+Suite Setup      Open Browser And Login To Intranet
+Suite Teardown     Sign Out And Close Browser
 Resource        ../Common/Resources.robot
 
 *** Test Cases ***

@@ -1,12 +1,12 @@
 *** Settings ***
 Documentation   To validate the Intranet Functionality
-Test Setup      Open Browser And Login To Intranet
-Test Teardown   Sign Out And Close Browser
+Suite Setup      Open Browser And Login To Intranet
+Suite Teardown     Sign Out And Close Browser
 Resource        ../Common/Resources.robot
 
 *** Test Cases ***
 Retrieve Birthday Records For Today's Date
-    ${TodayDate}      Get Current Date    Result_Format=%d
+    ${TodayDate}      Get Current Date    result_format=%d
     @{ActualBirthDayList}=	    Create List
     Set Global Variable         ${TodayDate}
     Set Global Variable         ${ActualBirthDayList}
@@ -26,6 +26,7 @@ Retrieve Birthday Records For Today's Date
     END
 
 Verify Filter Is Applied On Birthday Column Date By Today's Date
+      Go To             ${Home_Page}
       Click Element      ${CSS_ViewAllBirthDay}
       ${Date}        Get Selected List Label         ${CSS_GetDateDropDown}
       IF    ${TodayDate} == ${Date}
@@ -35,6 +36,7 @@ Verify Filter Is Applied On Birthday Column Date By Today's Date
       END
 
 Retrieve Birthday Records From View All Birthday
+    Go To             ${Home_Page}
     @{ExpectedBirthDayList}=    Create List
     Set Global Variable     ${ExpectedBirthDayList}
     Click Element      ${CSS_ViewAllBirthDay}
@@ -50,9 +52,10 @@ Retrieve Birthday Records From View All Birthday
     END
 
 Verify Both BirthDay Records Are Same
-   Lists Should Be Equal  ${ActualBirthDayList}    ${ExpectedBirthDayList}    
+   Lists Should Be Equal  ${ActualBirthDayList}    ${ExpectedBirthDayList}
 
 Retrieve Anniversary Records For Today's Date
+    Go To             ${Home_Page}
     @{ActualList}=	    Create List
     Set Global Variable         ${ActualList}
     Mouse Over          ${CSS_Cursor}
@@ -64,6 +67,7 @@ Retrieve Anniversary Records For Today's Date
     END
 
 Verify Filter Is Applied On Anniversary Column Date By Today's Date
+      Go To             ${Home_Page}
       Click Element       ${CSS_ClickAnniversaryLogo}
       ${Date}        Get Selected List Label         ${CSS_GetDateDropDown}
       IF    ${TodayDate} == ${Date}
@@ -73,6 +77,7 @@ Verify Filter Is Applied On Anniversary Column Date By Today's Date
       END
 
 Click On Wishing You Section And Retrieve Records
+    Go To             ${Home_Page}
     @{ExpectedList}=	    Create List
     Set Global Variable         ${ExpectedList}
     Click element       ${CSS_ClickAnniversaryLogo}
