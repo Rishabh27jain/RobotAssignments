@@ -6,15 +6,19 @@ ${CSS_ElementVisible}	    	css:a[id='cantAccessAccount']
 ${HomePage}                    	https://intranet.einfochips.com/employee_intranet/portal/user/dashboard
 ${CSS_PswdElementVisible}   	css:a[id='idA_PWD_ForgotPassword']
 ${CSS_SearchName}	    	css:input[id='birds']
-${CSS_GetListCount}	    	css:table.table-hover>tbody>tr:nth-child(n)
+${CSS_GetListCount}	    	table[class='table-hover'] tbody tr
 ${CSS_GetVariableName}	    	css:table.table-hover>tbody>tr:nth-child(INDEX)>td:nth-child(2)
 ${CSS_Cursor}		    	css:.dropdown-toggle
 ${CSS_SelectHoliday}	    	css:li[class='dropdown-item']:nth-child(3)
 ${CSS_SelectHolidayYear}        css:select[name='holiday_year']
+${CSS_PageCount}  		css:form[id='frm_holiday_list']>div[id='green1']>ul>li:nth-child(n)
+${CSS_GetHoldiayLists}          css:section[id='no-more-tables']>table>tbody>tr:nth-child(INDEX)
 ${CSS_SelectLocation}	    	css:select[id='branch_id']
 ${CSS_SelectBirthdayDate}       css:section[id='no-more-tables'] select
 ${CSS_SubmitButton}	        css:button.btn-success
 ${CSS_GetHolidayList}	        css:section[id='no-more-tables'] td[data-title='Description']:nth-child(4)
+${CSS_ClickPageCount}		css:form[id='frm_holiday_list']>div[id='green1']>ul>li:nth-child(${n})
+${CSS_GetAllCellData}       css:section[id='no-more-tables']>table>tbody>tr:nth-child(INDEX)
 ${CSS_SelectAnniversary}        css:li[class='dropdown-item']:nth-child(4)
 ${CSS_SearchDate}	        css:select.input-small
 ${CSS_GetAnniversaryName}       css:table.table-hover>tbody>tr>td:first-child
